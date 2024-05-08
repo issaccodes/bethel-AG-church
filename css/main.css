@@ -1,0 +1,171 @@
+
+*, body {
+    padding: 0;
+    margin: 0;
+    font-family: Poppins,sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Header styles starts here */
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 200px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#header {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.nav-links {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    font-weight: 200;
+    letter-spacing: 2px;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links:hover {
+    color: rgb(250, 57, 57);
+}
+/* Header styles ends here */
+
+
+/* main-container styles starts here */
+#main-container {
+    background-image: url('/images/yo.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#animated-text {
+    font-size: 5em;
+    letter-spacing: 10px;
+    font-family: monospace;
+    border-right: 5px solid;
+    width: 100%;
+    color: whitesmoke;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 5s ,
+        cursor .4s step-end infinite alternate;
+}
+
+#bethel-text {
+    color: rgb(250, 57, 57);
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+#welcome-text {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    padding: 20px;
+}
+
+#welcome-text-hr {
+    border: none;
+    background-color: whitesmoke;
+    height: 4px;
+    margin: 20px;
+}
+
+#join-btn {
+    background-color: transparent;
+    color: whitesmoke;
+    border: 4px solid whitesmoke;
+    padding: 10px 36px;
+    letter-spacing: 2px;
+    font-size: 28px;
+    margin-top: 30px;
+}
+
+/* rough work */
+#second-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 200px;
+}
+
+#about-us {
+    padding: 0px 80px;
+}
+
+#about-us-title {
+    text-align: center;
+    font-size: 60px;
+    color: rgb(85, 81, 81);
+}
+
+#about-us-hr {
+    margin-bottom: 80px;
+    border: none;
+    background-color: rgb(85, 81, 81);
+    height: 4px;
+}
+
+#about-us-text {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+#second-container-bg {
+    padding: 40px;
+}
+
+#second-container-img {
+    height: 600px;
+    width: 600px;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    transition: all 1s ease;
+    opacity: 0;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}

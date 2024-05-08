@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bethel Church | App</title>
 </head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,84 @@
 <link rel="stylesheet" href="css/main.css">
 
 <body>
-    
+   
+    <!-- Header starts here -->
+    <div id="main-header">
+
+        <div id="left-nav-bar">
+            <nav>
+                <a href="" class="nav-links">THOUGHTS</a>
+                <a href="" class="nav-links">SPEAKING</a>
+                <a href="" class="nav-links">VERSES</a>
+                <a href="" class="nav-links">SERVICES</a>
+            </nav>
+            
+        </div>
+        <div id="header">@ B E <span style="color: rgb(250, 57, 57)">T</span> H E L</div>
+        
+        <div id="right-nav-bar">
+            <nav>
+                <a href="" class="nav-links">HOME</a>
+                <a href="" class="nav-links">EVENTS</a>
+                <a href="" class="nav-links">ABOUT</a>
+                <a href="" class="nav-links">CONTACT</a>
+            </nav>
+        </div>
+    </div>
+    <!-- Header ends here -->
+
+    <!-- Hero page starts here -->
+    <div id="main-container">
+        <div id="hero-content">
+            <h1 id="animated-text">WELCOME TO <span id="bethel-text">BETHEL</span></h1>
+            <p id="welcome-text">
+                "OUR GOAL IS TO AWAKEN HUMANITY TO IT'S INFINITE AND UNIVERSAL LOVE."<br>
+                JOIN TODAY TO CONNECT WITH YOUR HIGHER SOUL.
+                <hr id="welcome-text-hr">
+            </p>
+        </div>
+        <button id="join-btn">JOIN</button>
+    </div>
+
+    <div id="second-container" class="reveal">
+        <div id="about-us">
+            <h1 id="about-us-title">About Us</h1>
+            <hr id="about-us-hr">
+            <p id="about-us-text">
+                "Bethel" holds a significant place in the spiritual journey of many. As a beacon of faith and community, Bethel embodies a sanctuary where hearts find solace, minds seek enlightenment, and souls discover belonging. It's not merely a name; it's a sacred space where individuals come together to celebrate, reflect, and grow in their connection with the divine and each other. Bethel stands as a testament to the enduring power of faith, love, and fellowship, guiding generations toward spiritual fulfillment and collective purpose.
+            </p>
+        </div>
+        <div id="second-container-bg">
+            <img src="/images/church01.jpg" alt="church picture" id="second-container-img">
+        </div>
+    </div>
+
+
+    <script>
+        window.addEventListener('scroll', function() {
+        let scrolled = window.scrollY;
+        let parallax = document.querySelector('#main-container');
+        parallax.style.backgroundPositionY = -(scrolled * 2.0) + 'px'; 
+        });
+
+        window.addEventListener('scroll',reveal);
+        function reveal() {
+            let reveals = document.querySelectorAll('.reveal');
+            for(let i=0; i<reveals.length; i++) {
+                let windowheight = window.innerHeight;
+                let revealtop = reveals[i].getBoundingClientRect().top;
+                let revealpoint = 150;
+
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+                else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
+
 </body>
 
 </html>
